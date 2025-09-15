@@ -10,7 +10,8 @@
         content="Chitphavan, Laos, Silk, Weaving, Handicrafts, Traditional Textiles, Cultural Heritage, Vientiane, Southeast Asia">
     <title>Chitphavan Textile</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="about.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="nav-footer.css">
+    <link rel="shortcut icon" href="header.jpg" type="image/x-icon">
     <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
 </head>
@@ -26,7 +27,7 @@
                 <Link to="/" class="nav-link">Home</Link>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
+                <a href="/about" class="nav-link">About</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Collection</a>
@@ -51,11 +52,12 @@
         <div class="header-text-wrapper">
             <div class="lg-header-text">Chitphavan Textile</div>
             <ul>
-                <li>About</li>
-                <li>Collection</li>
-                <li>Gallery</li>
-                <li>Video</li>
-                <li>Contact</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/collection">Collection</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/contact">Contact</a></li>
+
             </ul>
         </div>
     </header>
@@ -94,6 +96,16 @@
             <img src="images/scroll-7.jpg" alt="Chitphavan Textile">
         </div>
     </div>
+    <footer>
+        <h3>Chitphavan Textile</h3>
+                 <div class="icon-container">
+                <a href="https://www.facebook.com/profile.php?id=61575990496142" target="_blank"> <i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="www.tiktok.com/@chitphawan" target="_blank"> <i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+           <p>&#169; Copyright Chitphavan Textile <span class="year"></span>. All rights reserved.</p>
+    </footer>
     <script>
         const navMenu = document.querySelector(".nav-menu");
         const hamburger = document.querySelector(".hamburger");

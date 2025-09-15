@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chitphavan Textile manufactures and sells handicrafts in Laos. Discover the beauty of Lao textiles and their significance in Southeast Asian culture.">
+    <meta name="keywords"
+        content="Chitphavan, Laos, Silk, Weaving, Handicrafts, Traditional Textiles, Cultural Heritage, Vientiane, Southeast Asia">
+    <title>Chitphavan Textile</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="../nav-footer.css">
+    <link rel="shortcut icon" href="../header.jpg" type="image/x-icon">
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/8efc22d7af.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1>Chitphavan Textile</h1>
+        </Link>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <Link to="/" class="nav-link">Home</Link>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Collection</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Video</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <header id="about-header-section">
+        <div class="header-text-wrapper">
+            <div class="lg-header-text">Chitphavan Textile</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/collection">Collection</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="about-wrapper">
+            <img src="images/about-1.jpg" alt="" class="about-main-img">
+            <h2>About</h2>
+            <p>I'm Chitphavanh, an artist from Sam Neua, Huaphan in the Northern part of Laos. My mom taught me to weave
+                when I was just five years old. As the only girl in my family, it was my role to continue this cherished
+                skill. When I was ten, our family moved to Vientiane, and I began using my weaving to earn money for my
+                education, buying textbooks and paying my tuition from the fourth grade onwards.</p>
+            <div class="about-middle-container">
+                <img src="images/about-2.jpeg" alt="Chitphavan as a young girl with her mother and brothers">
+                <p>I would wake up at 4 AM every day to weave, a practice I continued until I finished high school.
+                    Following my mother's traditional belief that a high education wasn't necessary for a woman, I
+                    stopped
+                    my studies. However, I never stopped weaving. Instead, I continued to earn money to support my two
+                    younger brothers so they could both complete their bachelor's degrees.</p>
+            </div>
+            <p>In 2009, I met my husband, a Japanese man working in Laos. With a small budget I managed to save, I was
+                able to build my very own loom and officially become the artist, Chitphavanh.</p>
+        </div>
+    </header>
+    <footer>
+        <h3>Chitphavan Textile</h3>
+        <div class="icon-container">
+            <a href="https://www.facebook.com/profile.php?id=61575990496142" target="_blank"> <i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="www.tiktok.com/@chitphawan" target="_blank"> <i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p>&#169; Copyright Chitphavan Textile <span class="year"></span>. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        const navMenu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger");
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+        })
+    </script>
+
+
+</body>
+
+</html>
