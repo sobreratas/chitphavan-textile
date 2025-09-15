@@ -86,7 +86,7 @@ a {
 
 /* Header Section */
 #header-section {
-  background-image: url("/header.jpg");
+  background-image: url("header.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
