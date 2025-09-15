@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Oxanium:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Playfair Display, "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #f1f1f1;
+  color: #151515;
+}
+li {
+  list-style: none;
+}
+
+a {
+  /* color of links */
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.navbar {
+  /* color of nav bar */
+  background-color: rgb(22, 22, 22);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.navbar h1 {
+  font-size: 1.7rem;
+}
+
+.nav-logo {
+  width: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-text {
+  color: var(--main-color);
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: var(--main-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  /* color of bars */
+  background-color: rgb(255, 255, 255);
+}
+
+/* Header Section */
+#header-section {
+  background-image: url("/header.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.header-text-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  background-color: rgba(0,0,0,.3);
+}
+
+.lg-header-text {
+  font-size: 2rem;
+  width: 50%;
+}
+
+.header-text-wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  width: 50%;
+}
+
+/* Overlap Image Section */
+#overlap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5% 0;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+#overlap img {
+  width: 50%;
+}
+
+.img1,
+.img3 {
+  margin-left: 5%;
+}
+
+.img2 {
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: -10%;
+  margin-bottom: -10%;
+  z-index: 2;
+/* border-top: 15px solid #f5f5f5;
+border-left: 15px solid #f5f5f5;
+border-bottom: 15px solid #f5f5f5; */
+}
+
+/* Pics Slide Scroll */
+/*** LOGO SCROLL ***/
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.pics {
+  overflow: hidden;
+  padding: 5px 0;
+  background-color: #f5f5f5;
+  white-space: nowrap;
+  position: relative;
+}
+
+.pics:before {
+  left: 0;
+  background: linear-gradient(to right, #1f1f1f, rgba(31, 31, 31, 0.1));
+}
+
+.pics:after {
+  right: 0;
+  background: linear-gradient(to left, #1f1f1f, rgba(31, 31, 31, 0.1));
+}
+
+.pics:hover .pics-slide {
+  animation-play-state: paused;
+}
+
+.pics-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.pics-slide img {
+  width: 300px;
+    vertical-align: middle; /
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    visibility: visible;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    /* color of nav menu links */
+    background-color: rgb(35, 35, 35);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0.95;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+      font-size: 1.3rem;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Header Section Mobile */
+  .header-text-wrapper {
+    display: none;
+  }
+
+  /* Overlap Image Section Mobile */
+   #overlap {
+    padding: 0;
+  }
+
+  #overlap img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .img2 {
+      border: none;
+  }
+
+  /* Pics Slide Scroll */
+   .pics {
+    padding: 5px 0;
+  }
+}
